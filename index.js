@@ -7,11 +7,9 @@ class Pad {
     }
 
     playSound() {
-        if (this.name) {
-            const aud = new Audio(this.audioPath);
-            return aud.play();
-        }
-
+        const aud = new Audio(this.audioPath);
+        aud.currentTime = 0;
+        return aud.play();
     }
 
 }
@@ -21,17 +19,14 @@ const s = new Pad('kick', 'a', './sounds/snare.mp3');
 const d = new Pad('kick', 'a', './sounds/clap.mp3');
 const f = new Pad('kick', 'a', './sounds/tom-1.mp3');
 const g = new Pad('kick', 'a', './sounds/tom-2.mp3');
-// const h = new Pad('kick', 'a', './sounds/tom-3.mp3');
 const j = new Pad('kick', 'a', './sounds/hihat.mp3');
 const k = new Pad('kick', 'a', './sounds/openhat.mp3');
 const l = new Pad('kick', 'a', './sounds/crash.mp3');
 
 const drumKit = { a, s, d, f, g, j, k, l }
 
-
 const drums = document.querySelectorAll('.drum');
-console.log(drums)
-
+// console.log(drums)
 
 // added ev-listener to .drum class
 drums.forEach((item) => {
@@ -42,8 +37,8 @@ drums.forEach((item) => {
     })
 })
 
-//add keylistner to the window
-window.addEventListener('keypress', (evt) => {
+//add keylistner to the doc
+document.addEventListener('keypress', (evt) => {
     // console.log('key pressed:', evt.key.toLowerCase())
     // console.log('key pressed, evt=', evt)
     playPad(evt.key.toLowerCase())

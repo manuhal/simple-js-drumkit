@@ -19,44 +19,44 @@ html {
     align-items: center;
     /* height: 500px; */
     /* flex: 2; */
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
   
   .drum {
     /* flex-grow:1; */
+    width: 12rem;
+    height: 12rem;
     border: .4rem solid black;
-    border-radius: .5rem;
-    margin: 1rem;
-    font-size: 5rem;
-    padding: 2rem;
-    transition: all .07s ease;
-    width: 10rem;
+    border-radius: 50%;
+    /* border-radius: .5rem; */
+    /* border-radius: 1rem; */
+    margin: .5rem;
+    /* padding: 2rem; */
+    font-size: 4rem;
+    transition: all .3s ease;
     text-align: center;
     color: white;
     background: rgba(0,0,0,0.4);
-    text-shadow: 0 0 .5rem black;
-    display: block;
+    /* text-shadow: 0 0 .5rem black; */
+    /* display: block; */
+    /* display: inline-flex; */
     /* height: 200px; */
     text-transform: uppercase;
   }
   
-  .playing {
+  .pressed {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
     border-color: #ffc600;
-    box-shadow: 0 0 1rem #ffc600;
+    box-shadow: 0 0 1rem #ffc600; 
   }
+
   
-  /* .keyb {
-    display: block;
-    text-transform: uppercase;
-    font-size: 4rem;
-  }
-   */
   .sound {
     font-size: 1rem;
     text-transform: uppercase;
     text-align: center;
-    letter-spacing: .1rem;
+    /* letter-spacing: .1rem; */
     /* line-height: 2rem; */
     /* width:300px; */
     color: #ffc600;
