@@ -39,7 +39,6 @@ drums.forEach((item) => {
 
 //add keylistner to the doc
 document.addEventListener('keypress', (evt) => {
-    // console.log('key pressed:', evt.key.toLowerCase())
     // console.log('key pressed, evt=', evt)
     playPad(evt.key.toLowerCase())
 
@@ -47,15 +46,19 @@ document.addEventListener('keypress', (evt) => {
 
 
 function playPad(padName) {
-    // console.log('padName in drumKit?', padName in drumKit)
-    // a.playSound();
-    // drumKit['a'].playSound();
-    // b.playSound();
-    // console.log('drumKit[padName] = ', drumKit[padName])
-    // console.log('keyName=', keyName);
     if (padName in drumKit) {
-        console.log('playing pad ', padName);
+        const activeButton = document.querySelector(`.${padName}`)
+        // console.log('activeButton', activeButton);
+
+        // console.log('playing pad ', padName);
         drumKit[padName].playSound();
+
+        activeButton.classList.add('pressed')
+
+        setTimeout(() => {
+            activeButton.classList.remove('pressed')
+        }, 200)
+
     }
 }
 
