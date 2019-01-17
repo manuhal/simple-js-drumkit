@@ -25,7 +25,7 @@ const l = new Pad('kick', 'a', './sounds/crash.mp3');
 
 const drumKit = { a, s, d, f, g, j, k, l }
 
-const drums = document.querySelectorAll('.drum');
+const drums = document.querySelectorAll('.pad');
 // console.log(drums)
 
 // added ev-listener to .drum class

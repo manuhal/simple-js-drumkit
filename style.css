@@ -1,46 +1,47 @@
-html {
-    font-size: 10px;
-    /* background: url(http://i.imgur.com/b9r5sEL.jpg) bottom center; */
-    /* background: url(/images/720-x-343-drums.jpg) no-repeat center center fixed; */
-    /* background-size: cover; */
-    background-color: gray;
-  }
+
   body,html {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
   }
-  
+
+  body{
+    background: url(/images/club-4021428.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+ 
   .container {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /* height: 500px; */
-    /* flex: 2; */
+    /* height: 40vh; */
     /* min-height: 100vh; */
+    min-height:50vh;  
+    margin-top:25vh; 
+    background-color:rgba(14, 5, 1, 0.74);
   }
   
-  .drum {
-    /* flex-grow:1; */
-    width: 12rem;
-    height: 12rem;
-    border: .4rem solid black;
+  .pad {
+    /* width: 18vh; */
+    /* height: 18vh; */
+    width: 11rem;
+    height: 11rem;
+    border: .4rem solid rgb(82, 80, 80);
     border-radius: 50%;
-    /* border-radius: .5rem; */
-    /* border-radius: 1rem; */
-    margin: .5rem;
-    /* padding: 2rem; */
+    /* border-radius: 2rem; */
+    margin: .3rem;
+    /* font-size: 2rem; */
     font-size: 4rem;
     transition: all .3s ease;
     text-align: center;
     color: white;
-    background: rgba(0,0,0,0.4);
-    /* text-shadow: 0 0 .5rem black; */
-    /* display: block; */
-    /* display: inline-flex; */
-    /* height: 200px; */
+    background: rgba(0,0,0,0.8);
+    text-shadow: 0 0 .5rem black;
     text-transform: uppercase;
   }
   
@@ -56,8 +57,5 @@ html {
     font-size: 1rem;
     text-transform: uppercase;
     text-align: center;
-    /* letter-spacing: .1rem; */
-    /* line-height: 2rem; */
-    /* width:300px; */
     color: #ffc600;
   } 
