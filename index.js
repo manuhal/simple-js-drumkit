@@ -1,8 +1,7 @@
 
 class Pad {
-    constructor(name, key, audioPath) {
+    constructor(name, audioPath) {
         this.name = name;
-        this.key = key;
         this.audioPath = audioPath
     }
 
@@ -14,16 +13,16 @@ class Pad {
 
 }
 
-const a = new Pad('kick', 'a', './sounds/kick.mp3');
-const s = new Pad('kick', 'a', './sounds/snare.mp3');
-const d = new Pad('kick', 'a', './sounds/clap.mp3');
-const f = new Pad('kick', 'a', './sounds/tom-1.mp3');
-const g = new Pad('kick', 'a', './sounds/tom-2.mp3');
-const j = new Pad('kick', 'a', './sounds/hihat.mp3');
-const k = new Pad('kick', 'a', './sounds/openhat.mp3');
-const l = new Pad('kick', 'a', './sounds/crash.mp3');
+const a = new Pad('kick', './sounds/kick.mp3');
+const s = new Pad('kick', './sounds/snare.mp3');
+const d = new Pad('kick', './sounds/clap.mp3');
+const f = new Pad('kick', './sounds/tom-1.mp3');
+const h = new Pad('kick', './sounds/tom-2.mp3');
+const j = new Pad('kick', './sounds/hihat.mp3');
+const k = new Pad('kick', './sounds/openhat.mp3');
+const l = new Pad('kick', './sounds/crash.mp3');
 
-const drumKit = { a, s, d, f, g, j, k, l }
+const drumKit = { a, s, d, f, h, j, k, l }
 
 const drums = document.querySelectorAll('.pad');
 // console.log(drums)
